@@ -153,7 +153,7 @@ Columns: `Row`, `Predicted_Probability`
 • SHAP provides trustworthy insights into model behavior, which is crucial for regulated industries like insurance.  
 • The end-to-end flow simulates how real data science teams operate.
 
-This project isn't just code — it's **ML system design**, **optimization strategy**, and **model interpretability** all in one.
+This project isn't just code, it's **ML system design**, **optimization strategy**, and **model interpretability** all in one.
 
 ---
 
