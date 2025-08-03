@@ -1,0 +1,35 @@
+# config/search_config.yaml
+
+study_name: "lgbm_optuna_study"
+direction: "maximize"
+n_trials: 50
+early_stopping_rounds: 50
+n_splits: 5
+metric: "auc"
+
+# Sampler
+sampler:
+  type: "TPESampler"
+  multivariate: true
+  constant_liar: false
+  seed: 42
+
+# Pruner
+pruner:
+  type: "SuccessiveHalvingPruner"
+  min_resource: 20
+  reduction_factor: 3
+  min_early_stopping_rate: 0
+
+# Search space
+params:
+  learning_rate: { type: "loguniform", low: 0.001, high: 0.2 }
+  num_leaves: { type: "int", low: 20, high: 150 }
+  max_depth: { type: "int", low: 3, high: 12 }
+  min_data_in_leaf: { type: "int", low: 10, high: 100 }
+  feature_fraction: { type: "uniform", low: 0.5, high: 1.0 }
+  bagging_fraction: { type: "uniform", low: 0.5, high: 1.0 }
+  bagging_freq: { type: "int", low: 1, high: 7 }
+  lambda_l1: { type: "loguniform", low: 1e-8, high: 10.0 }
+  lambda_l2: { type: "loguniform", low: 1e-8, high: 10.0 }
+  scale_pos_weight: { type: "float", low: 1.0, high: 3.0 }

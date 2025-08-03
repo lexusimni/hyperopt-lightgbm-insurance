@@ -1,0 +1,23 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+env/
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore hidden config or local system files
+.DS_Store
+Thumbs.db
+
+# Ignore system/editor junk
+.vscode/
+.idea/
+
+# Ignore sensitive Kaggle API keys (if any)
+kaggle.json
+
+# Keep outputs/
+!outputs/
